@@ -8,7 +8,6 @@ const Dashboard = () => {
             <div className="min-h-screen bg-white flex flex-col">
       {/* Navbar */}
       <Header/>
-
       {/* Hero Section */}
       <div className="flex flex-col items-center justify-center flex-1 text-center px-4">
         <h2 className="text-3xl font-bold mb-4">Your Opinion Matters</h2>
