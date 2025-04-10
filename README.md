@@ -12,12 +12,6 @@ FeedForge is a full-stack feedback collection platform where users can share the
 
 ---
 
-## 🖼️ Screenshots
-
-| Feedback Form | Thank You Page |
-|---------------|----------------|
-| ![form](./screenshots/form.png) | ![thank-you](./screenshots/thankyou.png) |
-
 ---
 
 ## 🛠️ Tech Stack
@@ -52,31 +46,30 @@ POST /api/feedback
 Content-Type: application/json
 
 {
-  "name": "John Doe",
-  "email": "john@example.com",
-  "product": "Product A",
-  "duration": "1-6 months",
-  "featuresRating": "Good",
-  "favoriteFeature": "Ease of use",
-  "featureSuggestions": "Add dark mode",
-  "pricingRating": "Fair value",
-  "pricingFeedback": "Could be cheaper",
-  "usabilityRating": "Easy",
-  "usabilitySuggestions": "Improve mobile view",
-  "additionalComments": "Great overall!"
+-  "email": "john@example.com",
+- "product": "Product A",
+-  "duration": "1-6 months",
+-  "featuresRating": "Good",
+-  "favoriteFeature": "Ease of use",
+-  "featureSuggestions": "Add dark mode",
+- "pricingRating": "Fair value",
+-  "pricingFeedback": "Could be cheaper",
+ - "usabilityRating": "Easy",
+-  "usabilitySuggestions": "Improve mobile view",
+-  "additionalComments": "Great overall!"
 }
 
-1. Clone the repository
-   git clone https://github.com/yourusername/feedforge.git
-   cd feedforge
-2. Start the Backend
-   cd server
-   npm install
-   npm run dev
-3. Start the Frontend
-   cd client
-   npm install
-   npm start
+#1. Clone the repository
+  - git clone https://github.com/yourusername/feedforge.git
+  - cd feedforge
+#2. Start the Backend
+  - cd server
+  - npm install
+  - npm run dev
+#3. Start the Frontend
+  - cd client
+  - npm install
+  - npm start
    
 🤝 Contribution
 Contributions, issues, and suggestions are welcome! Feel free to open a pull request.
