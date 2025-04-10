@@ -2,9 +2,10 @@ import React from 'react'
 import { useEffect } from 'react';
 import { FcGoogle } from "react-icons/fc"
 
-import { useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 
 const LoginWithGoogle = () => {
+    const navigate = useNavigate();
     const LoginWithGoogle =()=>{
                 window.open("http://localhost:8000/api/v1/auth/login-with-google")
     }
