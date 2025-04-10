@@ -26,6 +26,7 @@ const FeedbackForm = () => {
   }
   const handleOnSubmit=async(e)=>{
     e.preventDefault()
+    navigate('/thankyou')
     try{
       const dataResponse = await fetch(`http://localhost:8000/api/v1/auth/product`,{
         method:'POST',
