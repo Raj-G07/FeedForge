@@ -8,7 +8,6 @@ const Success = () => {
 
   useEffect(() => { 
       const token = searchParams.get("token") ||''
-      console.log(token);
       if (token){
                   localStorage.setItem("token",token)
           navigate("/dashboard")

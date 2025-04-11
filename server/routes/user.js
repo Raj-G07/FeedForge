@@ -8,9 +8,7 @@ router.route("/login-with-google").get(passport.authenticate("google",{scope:['p
 router.route("/google/callback").get(passport.authenticate("google",{failureRedirect:'http://localhost:8000/api/v1/auth/failed'}),async(req,res)=>
 {
     const user = await req.user
-    await req.logout((req,res)=>{
-        console.log("Logout success")
-    })
+    
     res.redirect("http://localhost:5173/success?token="+user)
 })
 router.route("/dashboard").get(async (req,res) => {

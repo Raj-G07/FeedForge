@@ -3,8 +3,8 @@ import {User} from "../models/user.js"
 const LoginwithGoogle = async (profile,cb) => {
     const chk_user = await User.findOne({node_id:profile?._json.sub})
     if(chk_user){
-        const token = JWTService.generateToken({userId:chk_user})
-        cb(null,chk_user)
+        const token = JWTService.generateToken({userId:chk_user._id})
+        cb(null,token)
         return
     }
     const user = await User.create({
@@ -13,7 +13,7 @@ const LoginwithGoogle = async (profile,cb) => {
         email:profile?._json.email
     })
     const token = JWTService.generateToken({userId:user._id})
-    cb(user)
+    cb(null,token)
     return
 }
 

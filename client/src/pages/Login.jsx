@@ -7,7 +7,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 const LoginWithGoogle = () => {
     const navigate = useNavigate();
     const LoginWithGoogle =()=>{
-                window.open("http://localhost:8000/api/v1/auth/login-with-google")
+                window.open("http://localhost:8000/api/v1/auth/login-with-google", "_self")
     }
     const [searchParams]=  useSearchParams();
 
