@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended:false}))
 app.use(passport.initialize())
 app.use(passport.session())
 passport.use(GoogleProvider)
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 app.use('/api/v1/auth',UserRoute)
 app.listen(PORT,()=>{
     console.log(`Server listen at port ${PORT}`)

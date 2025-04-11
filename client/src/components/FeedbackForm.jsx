@@ -82,11 +82,11 @@ const FeedbackForm = () => {
         <legend class="text-lg font-medium mb-2">Product Features</legend>
         <div>
           <label class="block mb-1">How would you rate our product features?</label>
-          <div class="flex flex-wrap gap-6" onChange={handleOnchange}>
-            <label class="flex items-center space-x-2"><input type="radio" name="features" /> <span>Excellent</span></label>
-            <label class="flex items-center space-x-2"><input type="radio" name="features" /> <span>Good</span></label>
-            <label class="flex items-center space-x-2"><input type="radio" name="features" /> <span>Average</span></label>
-            <label class="flex items-center space-x-2"><input type="radio" name="features" /> <span>Poor</span></label>
+          <div class="flex flex-wrap gap-6" >
+            <label class="flex items-center space-x-2"><input type="radio" name="featureRating" onChange={handleOnchange} value="Excellent" checked={data.featureRating === "Excellent"}/> <span>Excellent</span></label>
+            <label class="flex items-center space-x-2"><input type="radio" name="featureRating" onChange={handleOnchange} value="Good" checked={data.featureRating === "Good"}/> <span>Good</span></label>
+            <label class="flex items-center space-x-2"><input type="radio" name="featureRating" onChange={handleOnchange} value="Average" checked={data.featureRating === "Average"}/> <span>Average</span></label>
+            <label class="flex items-center space-x-2"><input type="radio" name="featureRating" onChange={handleOnchange} value="Poor" checked={data.featureRating === "Poor"}/> <span>Poor</span></label>
           </div>
         </div>
         <input type="text" placeholder="Your favorite feature" name="favoriteFeature" class="border px-4 py-2 rounded-md w-full"  onChange={handleOnchange}/>
@@ -97,11 +97,11 @@ const FeedbackForm = () => {
         <legend class="text-lg font-medium mb-2">Product Pricing</legend>
         <div>
           <label class="block mb-1">How would you rate the value for money of our product?</label>
-          <div class="flex flex-wrap gap-6" onChange={handleOnchange}>
-            <label class="flex items-center space-x-2"><input type="radio" name="pricing" /> <span>Excellent value</span></label>
-            <label class="flex items-center space-x-2"><input type="radio" name="pricing" /> <span>Good value</span></label>
-            <label class="flex items-center space-x-2"><input type="radio" name="pricing" /> <span>Fair value</span></label>
-            <label class="flex items-center space-x-2"><input type="radio" name="pricing" /> <span>Overpriced</span></label>
+          <div class="flex flex-wrap gap-6">
+            <label class="flex items-center space-x-2"><input type="radio" name="pricingRating" onChange={handleOnchange} value="Excellent value" checked={data.pricingRating === "Excellent value"}/> <span>Excellent value</span></label>
+            <label class="flex items-center space-x-2"><input type="radio" name="pricingRating" onChange={handleOnchange} value="Good value"  checked={data.pricingRating === "Good value"}/> <span>Good value</span></label>
+            <label class="flex items-center space-x-2"><input type="radio" name="pricingRating" onChange={handleOnchange} checked={data.pricingRating === "Fair value"} value="Fair value" /> <span>Fair value</span></label>
+            <label class="flex items-center space-x-2"><input type="radio" name="pricingRating" onChange={handleOnchange} value="Overpriced"  checked={data.pricingRating === "Overpriced "}/> <span>Overpriced</span></label>
           </div>
         </div>
         <textarea placeholder="Your thoughts on our pricing" class="border px-4 py-2 rounded-md w-full min-h-[100px]" name="pricingComment"  onChange={handleOnchange}></textarea>
@@ -111,11 +111,11 @@ const FeedbackForm = () => {
         <legend class="text-lg font-medium mb-2">Product Usability</legend>
         <div>
           <label class="block mb-1">How easy is our product to use?</label>
-          <div class="flex flex-wrap gap-6"  onChange={handleOnchange}>
-            <label class="flex items-center space-x-2"><input type="radio" name="usability" /> <span>Very easy</span></label>
-            <label class="flex items-center space-x-2"><input type="radio" name="usability" /> <span>Easy</span></label>
-            <label class="flex items-center space-x-2"><input type="radio" name="usability" /> <span>Moderate</span></label>
-            <label class="flex items-center space-x-2"><input type="radio" name="usability" /> <span>Difficult</span></label>
+          <div class="flex flex-wrap gap-6"  >
+            <label class="flex items-center space-x-2"><input type="radio" name="usabilityRating"onChange={handleOnchange} value="Very easy" checked={data.usabilityRating === "Very easy"}/> <span>Very easy</span></label>
+            <label class="flex items-center space-x-2"><input type="radio" name="usabilityRating" onChange={handleOnchange} value="Easy"  checked={data.usabilityRating=== "Easy"}/> <span>Easy</span></label>
+            <label class="flex items-center space-x-2"><input type="radio" name="usabilityRating" onChange={handleOnchange} value="Moderate" checked={data.usabilityRating=== "Moderate"}/> <span>Moderate</span></label>
+            <label class="flex items-center space-x-2"><input type="radio" name="usabilityRating" onChange={handleOnchange} value="Difficult" checked={data.usabilityRating === "Difficult"}/> <span>Difficult</span></label>
           </div>
         </div>
         <textarea placeholder="Your suggestions for improving usability" class="border px-4 py-2 rounded-md w-full min-h-[100px]" name="usabilityComment"  onChange={handleOnchange}></textarea>
